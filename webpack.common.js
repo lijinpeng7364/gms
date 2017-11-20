@@ -6,8 +6,8 @@ const webpack = require('webpack');
 
 module.exports = {
 	entry: {
-		app: './src/index.js',
-		vendor: ['./public/vendor/pace/pace.js']
+		app: './app/index.js',
+		vendor: ['./vendor/pace/pace.js']
 	},
 	plugins: [
 		new CleanWebpackPlugin(['./public/dist/']),
@@ -34,6 +34,11 @@ module.exports = {
     },
 	module: {
 		rules: [
+			{
+				test: /\.js$/,
+				exclude: /(node_modules)/,
+				use: 'babel-loader'
+			},
 			{
 				test: /\.css$/,
 				use: ExtractTextPlugin.extract({
