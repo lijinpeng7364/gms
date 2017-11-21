@@ -13,7 +13,8 @@ module.exports = merge(common, {
 	devServer: {
 		contentBase: './public',
 		hot: true,
-		publicPath: '/dist/'
+		publicPath: '/dist/',
+		historyApiFallback: true
    	},
    	plugins: [
 		new webpack.NamedModulesPlugin(),
