@@ -9,6 +9,12 @@ npm install
 npm start
 ```
 
+### 生产环境
+
+```
+npm run build
+```
+
 ### 代码规范
 
 1.不使用分号“;”
